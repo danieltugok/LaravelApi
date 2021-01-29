@@ -1,0 +1,1407 @@
+{
+	"info": {
+		"_postman_id": "e018626b-f799-49f3-808f-c8541e90e7e9",
+		"name": "Gestão de condomonio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cpf",
+											"value": "11647377757",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/api/auth/login",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cpf",
+											"value": "11647377757",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/api/auth/logout",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cpf",
+											"value": "11647377757",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/api/auth/validate",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Daniel",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "danieltugok@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "cpf",
+											"value": "11644477757",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "password_confirm",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}/api/auth/register",
+									"host": [
+										"{{local}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Who am I - User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/api/user/whoami",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"whoami"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Daniel",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "danieltugok@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "11644477757",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "password_confirm",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/user/{{id_user}}/info",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"{{id_user}}",
+								"info"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/api/user/{{id_user}}/edit?name=danielk&email=dani@dani.com&cpf=11111111111&password=12345",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"{{id_user}}",
+								"edit"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "danielk"
+								},
+								{
+									"key": "email",
+									"value": "dani@dani.com"
+								},
+								{
+									"key": "cpf",
+									"value": "11111111111"
+								},
+								{
+									"key": "password",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Found and Lost",
+			"item": [
+				{
+					"name": "Found and Lost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/foundandlost",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"foundandlost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Found and Lost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "bola largada no patio",
+									"type": "text"
+								},
+								{
+									"key": "where",
+									"value": "patio2",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/home/danielkogut/Downloads/WhatsApp Image 2020-11-24 at 14.22.54.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/foundandlost",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"foundandlost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Found and Lost",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/foundandlost/{{id_item_foundandlost}}?status=recovered",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"foundandlost",
+								"{{id_item_foundandlost}}"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "recovered"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Warnings",
+			"item": [
+				{
+					"name": "Warnings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "property",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/warnings?property=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"warnings"
+							],
+							"query": [
+								{
+									"key": "property",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Warning",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "titulo de teste para Warning",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "list",
+									"value": "foto1.jpg,foto2.jpg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/warning",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"warning"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Warning File",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/home/danielkogut/Downloads/WhatsApp Image 2020-11-24 at 14.22.54.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/warning/file",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"warning",
+								"file"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Units - Properties",
+			"item": [
+				{
+					"name": "Units",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/unit/{{id_unit}}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"unit",
+								"{{id_unit}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Person",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Daniel",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "2021-01-10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/unit/{{id_unit}}/addperson",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"unit",
+								"{{id_unit}}",
+								"addperson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Ford",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Preto",
+									"type": "text"
+								},
+								{
+									"key": "plate",
+									"value": "XXX-0000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/unit/{{id_unit}}/addvehicle",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"unit",
+								"{{id_unit}}",
+								"addvehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Pet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lulu",
+									"type": "text"
+								},
+								{
+									"key": "race",
+									"value": "Pastor Alemão",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/unit/{{id_unit}}/addpet",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"unit",
+								"{{id_unit}}",
+								"addpet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Person",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/unit/{{id_unit}}/removeperson",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"unit",
+								"{{id_unit}}",
+								"removeperson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/unit/{{id_unit}}/removevehicle",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"unit",
+								"{{id_unit}}",
+								"removevehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/unit/{{id_unit}}/removepet",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"unit",
+								"{{id_unit}}",
+								"removepet"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Reservations",
+			"item": [
+				{
+					"name": "Reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}/api/reservations",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Make Reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2020-12-25",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "09:00:00",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/reservation/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"reservation",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Disabled Dates",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2020-12-23",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "04:00:00",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/reservations/2/disableddates",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"reservations",
+								"2",
+								"disableddates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Times Reservation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2020-12-23",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "04:00:00",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/reservations/2/disableddates",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"reservations",
+								"2",
+								"disableddates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Reservations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2020-12-23",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "04:00:00",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/myreservations?property=2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"myreservations"
+							],
+							"query": [
+								{
+									"key": "property",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2020-12-23",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "04:00:00",
+									"type": "text"
+								},
+								{
+									"key": "property",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/myreservation/2",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"myreservation",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/ping",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Walls",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/walls",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"walls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Walls like",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/wall/{{id_user}}/like",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"wall",
+						"{{id_user}}",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/docs",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Billets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYxMTg0NjA5MSwibmJmIjoxNjExODQ2MDkxLCJqdGkiOiJacENiSzZFNGFrQVZWcDdzIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XzIj04pkR-ZJ87jOt0fAg2d2jXJjAzOdurkeaovGQoY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/api/billets?property=1",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"api",
+						"billets"
+					],
+					"query": [
+						{
+							"key": "property",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f6816a8d-ec72-4075-9aa3-9ca932190161",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c1239a96-c59c-473f-bb8e-7919727e759a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "adc92c4f-75e8-4460-9637-dd684fa793b9",
+			"key": "local",
+			"value": "http://127.0.0.1:8000"
+		},
+		{
+			"id": "71274236-44b6-4171-9a22-a9b1e44d8a36",
+			"key": "id_user",
+			"value": "1"
+		},
+		{
+			"id": "7f377dcb-6041-462a-9c23-515cf7073635",
+			"key": "id_item_foundandlost",
+			"value": "4"
+		},
+		{
+			"id": "f8af7040-0335-483b-b757-9ddc742cf4d6",
+			"key": "id_unit",
+			"value": "2"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
