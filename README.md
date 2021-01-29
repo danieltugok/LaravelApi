@@ -1,14 +1,22 @@
 # LaravelApi
 
+
+### Instalando dependencias.
 ```bash
 composer install
 ```
+
+
+### Preparando o BD.
 ```bash
 php artisan migrate:install
 ```
 ```bash
 php artisan migrate
 ```
+
+
+### Limpando Caches.
 ```bash
 php artisan config:clear
 ```
