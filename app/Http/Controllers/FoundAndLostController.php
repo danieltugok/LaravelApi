@@ -74,7 +74,7 @@ class FoundAndLostController extends Controller
         return $array;
     }
 
-    public function update($id, equest $request) {
+    public function update($id, Request $request) {
         $array = ['error' => ''];
 
         $status = $request->input('status');

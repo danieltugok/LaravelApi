@@ -24,7 +24,18 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 Route::post('/auth/register', [AuthController::class, 'register']);
 
 
+// altera user
+// ler user logado
+
+
+
+
 Route::middleware('auth:api')->group(function () {
+
+
+    Route::get('/user/whoami', [UserController::class, 'whoAmI']);
+    Route::get('/user/{id}/info', [UserController::class, 'userInfo']);
+    Route::put('/user/{id}/edit', [UserController::class, 'editUser']);
 
     Route::post('/auth/validate', [AuthController::class, 'validateToken']);
     Route::post('/auth/logout', [AuthController::class, 'logout']);
@@ -58,7 +69,6 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/unit/{id}/removeperson',  [UnitController::class, 'removePerson']);
     Route::post('/unit/{id}/removevehicle',  [UnitController::class, 'removeVehicle']);
     Route::post('/unit/{id}/removepet',  [UnitController::class, 'removePet']);
-    
     
     // Reservas
     Route::get('/reservations',  [ReservationController::class, 'getReservations']);
